@@ -1,13 +1,9 @@
-language: java
-
+sudo: required
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install graphviz maven make openjdk-8-jdk devscripts debhelper rpm
+ - sudo apt-get -qq update
+ - sudo apt-get install graphviz maven make openjdk-8-jdk devscripts debhelper rpm
+
+language: java
 
 script: 
   - mvn clean install -DfullBuild
-  #- mvn clean test -Pperformance-test
-
-branches:
- only:
-- master
