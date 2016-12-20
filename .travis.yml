@@ -4,8 +4,9 @@ before_install:
  - sudo apt-get -qq update
  - sudo apt-get install oracle-java8-installer -y
  - sudo apt-get install graphviz maven make devscripts debhelper rpm -y
+ - export MAVEN_OPTS="-Xmx512m"
 
 language: java
 
 script: 
-  - mvn clean install -DfullBuild
+  - mvn clean install -DfullBuild -DskipTests
