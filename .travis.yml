@@ -2,7 +2,8 @@ sudo: required
 before_install:
  - sudo add-apt-repository ppa:webupd8team/java -y
  - sudo apt-get -qq update
- - sudo apt-get install graphviz maven make openjdk-8-jdk devscripts debhelper rpm y
+ - sudo apt-get install oracle-java8-installer -y
+ - sudo apt-get install graphviz maven make devscripts debhelper rpm -y
 
 language: java
 
