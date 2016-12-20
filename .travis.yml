@@ -9,4 +9,4 @@ before_install:
 language: java
 
 script: 
-  - mvn clean install -DfullBuild -DskipTests
+  - mvn -q clean install -DfullBuild -DskipTests
